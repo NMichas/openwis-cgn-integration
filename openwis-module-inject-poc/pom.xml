@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.geonetwork-opensource</groupId>
+		<artifactId>openwis-alternative-v4-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../openwis-alternative-v4-parent/pom.xml</relativePath>
+	</parent>
+	
+	<artifactId>openwis-module-inject-poc</artifactId>
+	<packaging>jar</packaging>
+	<name>European Dynamics Functionality Injection Proof of Concept</name>
+	<description>This will demonstrate the ability to inject functionality into the original GeoNetwork code in a non-invasive manner.</description>
+		
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		
+		<plugins>
+			<plugin>
+				<artifactId>maven-remote-resources-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>bundle</goal>
+						</goals>
+					</execution>
+				</executions>
+				 <configuration>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

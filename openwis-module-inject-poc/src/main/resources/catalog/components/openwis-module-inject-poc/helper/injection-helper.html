@@ -1,0 +1,50 @@
+<!--
+	This fragment is to be appended at the document.body.
+	It is appended there because of wro4j limitations (in order to add our code we must make it an existing module's dependency. But dependencies are
+	loaded before the actual module so we don't have a way of adding code AFTER the "main" angular module is loaded.)
+	When the specific angular module loads, it will execute a function that will hijack a functionality of an already registered controller.   
+ -->
+
+<script type="text/javascript">
+		
+	
+	/**
+	 * Executes the hijack when an ng-include is requested.
+	 * 
+	 */
+	angular.module('gn_admin').run(["$rootScope", "$timeout",function($rootScope, $timeout){
+		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+			//console.log('************************************************');		
+		    //console.log(event);
+		    //console.log(current);
+			$timeout(function(){
+				console.log(current.locals.$scope);
+			
+				if(current.templateUrl.indexOf('catalog/templates/admin/page-layout.html') > -1){
+			    	if(current.controller == 'GnAdminMetadataController'){
+			    		var subscriptions = {
+							type: 'subscriptions',
+							label: 'Manage Subscriptions',
+							icon: 'fa-check',
+							href: '#/metadata/subscriptions'
+						}
+						current.locals.$scope.pageMenu.tabs.splice(2, 0, subscriptions);
+						
+						var productMetadata = {
+							type: 'productMetadata',
+							label: 'Product Metadata',
+							icon: 'fa-check',
+							href: '#/metadata/product-metadata'
+						}
+						current.locals.$scope.pageMenu.tabs.splice(2, 0, productMetadata);
+			    	}			    	
+			    }
+			});
+		    
+		    	
+		    
+		});
+	}]);
+	
+	
+</script>
