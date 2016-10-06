@@ -1,13 +1,11 @@
 (function() {
-	goog.provide('openwis-module-inject-poc-controller');
+	goog.provide('openwis-module-inject-menu-items');
 
-	var module = angular.module('openwis-module-inject-poc-controller', []);
+	var module = angular.module('openwis-module-inject-menu-items', []);
 
 	/**
 	 * This module does not actually define any content. The controller we want
-	 * to hijack is loaded by an ng-include and this means that it is
-	 * out-of-reach since angular initializes it before we can get our hands on
-	 * it.
+	 * to hijack is loaded by a route.
 	 * 
 	 * This module only exists because of the wro4j limitations (no JS loads
 	 * unless it's in lib.js or unless it's on a dependency tree)
@@ -27,5 +25,5 @@ JsUtil.FunctionsToExecuteOnReady
 			JsUtil
 					.loadHtmlContentIntoElement(
 							$(document.body),
-							'/geonetwork/catalog/components/openwis-module-inject-poc/helper/injection-helper.html');
+							'/geonetwork/catalog/components/openwis-module-inject-poc/helper/inject-menu-items-actual-script.html');
 		});

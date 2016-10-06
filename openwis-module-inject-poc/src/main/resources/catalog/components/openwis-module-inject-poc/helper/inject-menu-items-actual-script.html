@@ -9,16 +9,12 @@
 		
 	
 	/**
-	 * Executes the hijack when an ng-include is requested.
+	 * Executes the hijack when a route is changed
 	 * 
 	 */
 	angular.module('gn_admin').run(["$rootScope", "$timeout",function($rootScope, $timeout){
 		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-			//console.log('************************************************');		
-		    //console.log(event);
-		    //console.log(current);
 			$timeout(function(){
-				console.log(current.locals.$scope);
 			
 				if(current.templateUrl.indexOf('catalog/templates/admin/page-layout.html') > -1){
 			    	if(current.controller == 'GnAdminMetadataController'){
@@ -45,6 +41,14 @@
 		    
 		});
 	}]);
+	
+	
+	
+	/**
+	 * Add this module as a dependency to its parent 
+	 */	
+	var gnAdminModule = angular.module('gn_admin');
+	gnAdminModule.requires.push('openwis-module-inject-menu-items');
 	
 	
 </script>
