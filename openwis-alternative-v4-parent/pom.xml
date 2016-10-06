@@ -1,17 +1,29 @@
-<project 
-	xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.geonetwork-opensource</groupId>
 	<artifactId>openwis-alternative-v4-parent</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+
+	<properties>
+		<wro.version>1.7.7</wro.version>
+		<print-lib.version>2.1.1</print-lib.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+    	<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
 	<modules>
+		<module>../openwis-wro4j</module>
 		<module>../openwis-war-overlay</module>
 		<module>../openwis-module-inject-poc</module>
 	</modules>
+
 	<dependencyManagement>
 		<dependencies>
+
+			<!-- Application modules -->
 			<dependency>
 				<groupId>org.geonetwork-opensource</groupId>
 				<artifactId>openwis-war-overlay</artifactId>
@@ -23,8 +35,16 @@
 				<artifactId>openwis-module-inject-poc</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.geonetwork-opensource</groupId>
+				<artifactId>openwis-wro4j</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- Application modules -->
 
-			<!-- This is the original OpenWIS-GN dependency that our modules will be injected into -->
+
+			<!-- This is the original OpenWIS-GN dependency that our modules will 
+				be injected into -->
 			<dependency>
 				<groupId>org.geonetwork-opensource</groupId>
 				<artifactId>web-app</artifactId>
@@ -32,8 +52,23 @@
 				<type>war</type>
 				<scope>runtime</scope>
 			</dependency>
-			<!-- This is the original OpenWIS-GN dependency that our modules will be injected into -->
-			
+			<!-- This is the original OpenWIS-GN dependency that our modules will 
+				be injected into -->
+
+			<!-- 3rd party -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>18.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>1.3.174</version>
+			</dependency>
+
+			<!-- 3rd party -->
+
 		</dependencies>
 	</dependencyManagement>
 </project>
