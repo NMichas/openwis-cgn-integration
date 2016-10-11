@@ -4,11 +4,8 @@
 	var module = angular.module('openwis-module-inject-menu-items', []);
 
 	/**
-	 * This module does not actually define any content. The controller we want
-	 * to hijack is loaded by a route.
-	 * 
-	 * This module only exists because of the wro4j limitations (no JS loads
-	 * unless it's in lib.js or unless it's on a dependency tree)
+	 * This module does not actually define any .It only exists because of the wro4j limitations 
+	 * (no JS loads unless it's in lib.js or unless it's on a dependency tree)
 	 */
 
 })();
@@ -23,7 +20,7 @@
 JsUtil.FunctionsToExecuteOnReady
 		.push(function() {
 			JsUtil
-					.loadHtmlContentIntoElement(
+					.appendHtmlContentIntoElement(
 							$(document.body),
-							'/geonetwork/catalog/components/openwis-module-inject-poc/helper/inject-menu-items-actual-script.html');
+							'/geonetwork/catalog/components/openwis-module-inject-poc/helper/injected-controller-script.html');
 		});

@@ -1,0 +1,69 @@
+
+<script type="text/javascript">
+		
+	
+	/**
+	 * This is the extended controller that will replace the original one
+	 * 
+	 */
+	
+	angular.module('gn_adminmetadata_controller').controller('EXT_GnAdminMetadataController', [
+	    '$scope', '$routeParams', '$http', '$rootScope', '$translate', '$compile', '$controller',
+	    'gnSearchManagerService', 'gnUtilityService',
+	    function($scope, $routeParams, $http, $rootScope, $translate, $compile, $controller, 
+	            gnSearchManagerService, gnUtilityService) {
+	    	
+	    	angular.extend(this, $controller('GnAdminMetadataController', {
+	            $scope : $scope,
+	            $routeParams : $routeParams,
+	            $http : $http,
+	            $rootScope : $rootScope,
+	            $translate : $translate,
+	            $compile : $compile,
+	            gnSearchManagerService : gnSearchManagerService,
+	            gnUtilityService : gnUtilityService
+	          }));
+	    	
+	    	$scope.pageMenu = {
+	    	        folder: 'metadata/',
+	    	        defaultTab: 'metadata-and-template',
+	    	        tabs:
+	    	            [{
+	    	              	type: 'metadata-and-template',
+	    	              	label: 'metadataAndTemplates',
+	    	              	icon: 'fa-archive',
+	    	              	href: '#/metadata/metadata-and-template'
+	    	            },{
+	    	             	type: 'formatter',
+	    	              	label: 'metadataFormatter',
+	    	              	icon: 'fa-eye',
+	    	              	href: '#/metadata/formatter'
+	    	            },{
+							type: 'subscriptions',
+							label: 'Manage Subscriptions',
+							icon: 'fa-check',
+							href: '#/metadata/subscriptions'
+						},{
+							type: 'product-metadata',
+							label: 'Product Metadata',
+							icon: 'fa-check',
+							href: '#/metadata/product-metadata'
+						},{
+	    	              	type: 'schematron',
+	    	              	label: 'schematron',
+	    	              	icon: 'fa-check',
+	    	              	href: '#/metadata/schematron'
+	    	            },{
+	    	              	type: 'metadata-identifier-templates',
+	    	              	icon: 'fa-key',
+	    	              	label: 'manageMetadataIdentifierTemplates',
+	    	              	href: '#/metadata/metadata-identifier-templates'
+	    	            }]
+	    	      };
+	    	
+    }]);
+	
+	JsUtil.registerReplacementController('GnAdminMetadataController','EXT_GnAdminMetadataController');
+
+	
+</script>
