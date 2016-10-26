@@ -15,6 +15,8 @@ import javax.persistence.MapsId;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.fao.geonet.domain.GeonetEntity;
+import org.fao.geonet.domain.User;
 import org.fao.geonet.entitylistener.OpenwisDownloadEntityListenerManager;
 
 /**

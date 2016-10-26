@@ -15,6 +15,11 @@
 			<artifactId>common</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.geonetwork-opensource</groupId>
+			<artifactId>domain</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-core</artifactId>
 		</dependency>
@@ -88,6 +93,14 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -139,6 +152,26 @@
 							<sources>
 								<source>target/metamodel</source>
 							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<!-- <finalName>${project.artifactId}</finalName> -->
+							<artifactSet>
+								<includes>
+									<include>org.geonetwork-opensource:domain</include>
+								</includes>
+							</artifactSet>
 						</configuration>
 					</execution>
 				</executions>

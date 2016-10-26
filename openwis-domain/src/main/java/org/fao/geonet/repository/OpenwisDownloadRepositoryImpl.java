@@ -12,7 +12,6 @@ import javax.persistence.criteria.Root;
 
 import org.fao.geonet.domain.OpenwisDownload;
 import org.fao.geonet.domain.User;
-import org.springframework.dao.EmptyResultDataAccessException;
 
 /**
  * Implementation object for methods in {@link OpenwisDownloadRepositoryCustom}.

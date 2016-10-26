@@ -3,6 +3,7 @@ package org.fao.geonet.repository;
 import org.fao.geonet.domain.OpenwisDownload;
 import org.fao.geonet.domain.User;
 
+
 /**
  * Custom methods for loading {@link OpenwisDownload} entities.
  *

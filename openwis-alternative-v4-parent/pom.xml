@@ -10,7 +10,8 @@
 		<wro.version>1.7.7</wro.version>
 		<print-lib.version>2.1.1</print-lib.version>
 		<lucene.version>4.9.0</lucene.version>
-		<!-- <maven.compiler.source>1.7</maven.compiler.source> <maven.compiler.target>1.7</maven.compiler.target> -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.version>4.2.4.RELEASE</spring.version>
 		<spring.security.version>3.2.0.RELEASE</spring.security.version>
 		<openwis.cgn.version>3.2.0-0</openwis.cgn.version>
@@ -111,8 +112,12 @@
 				<version>${openwis.cgn.version}</version>
 				<scope>provided</scope>
 			</dependency>
-			<!-- <dependency> <groupId>org.geonetwork-opensource</groupId> <artifactId>domain</artifactId> 
-				<version>${openwis.cgn.version}</version> <scope>provided</scope> </dependency> -->
+			<dependency>
+				<groupId>org.geonetwork-opensource</groupId>
+				<artifactId>domain</artifactId>
+				<version>${openwis.cgn.version}</version>
+				<scope>provided</scope>
+			</dependency>
 			<dependency>
 				<!--<groupId>${project.groupId}</groupId> -->
 				<groupId>org.geonetwork-opensource</groupId>
@@ -285,6 +290,26 @@
 				<artifactId>junit</artifactId>
 				<version>4.10</version>
 				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-util</artifactId>
+				<version>9.3.9.v20160517</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-io</artifactId>
+				<version>9.3.9.v20160517</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>2.5.2</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.5.2</version>
 			</dependency>
 			<!-- 3rd party -->
 		</dependencies>

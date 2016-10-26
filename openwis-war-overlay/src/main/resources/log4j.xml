@@ -238,7 +238,7 @@
   <!-- Turn off logging except when explicitly declared below -->
   
   <root>
-    <level value="ERROR"></level>
+    <level value="INFO"></level>
     <appender-ref ref="consoleAppender"/>
   </root>
   

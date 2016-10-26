@@ -29,6 +29,7 @@
 	</properties>
 
 	<build>
+		<finalName>geonetwork</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-remote-resources-plugin</artifactId>
@@ -58,6 +59,7 @@
 							<artifactId>web-app</artifactId>
 							<excludes>
 								<exclude>WEB-INF/lib/wro4j-${openwis.cgn.version}.jar</exclude>
+								<exclude>WEB-INF/lib/domain-${openwis.cgn.version}.jar</exclude>
 
 								<exclude>WEB-INF/lib/jetty-client-8.1.15.v20140411.jar</exclude>
 								<exclude>WEB-INF/lib/jetty-continuation-8.1.15.v20140411.jar</exclude>
@@ -72,6 +74,14 @@
 								<exclude>WEB-INF/lib/jetty-util-6.1.26.jar</exclude>
 
 								<exclude>WEB-INF/lib/json-20080701.jar</exclude>
+								
+								<exclude>WEB-INF/lib/geronimo-servlet_3.0_spec-1.0.jar</exclude>
+								<exclude>WEB-INF/lib/javax.servlet-api-3.1.0.jar</exclude>
+								<exclude>WEB-INF/lib/servlet-api-2.5-20081211.jar</exclude>
+								<exclude>WEB-INF/lib/servlet-api-2.5-6.1.14.jar</exclude>
+								<exclude>WEB-INF/lib/jsp-api-2.1-6.1.14.jar</exclude>
+								
+								
 							</excludes>
 						</overlay>
 					</overlays>
@@ -148,6 +158,14 @@
 		<dependency>
 			<groupId>xom</groupId>
 			<artifactId>xom</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-util</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-io</artifactId>
 		</dependency>
 	</dependencies>
 
