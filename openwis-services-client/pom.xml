@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-	xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.geonetwork-opensource</groupId>
@@ -18,6 +17,10 @@
 		<dependency>
 			<groupId>org.springframework.ws</groupId>
 			<artifactId>spring-ws-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
@@ -37,14 +40,14 @@
 							<generatePackage>org.openwis.products.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/products</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>ProductMetadataService.wsdl</include>
 										</includes>
 									</fileset>
@@ -85,14 +88,14 @@
 							<generatePackage>org.openwis.subscription.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/subscription</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>SubscriptionService.wsdl</include>
 										</includes>
 									</fileset>
@@ -110,14 +113,14 @@
 							<generatePackage>org.openwis.processedrequest.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/processedrequest</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>ProcessedRequestService.wsdl</include>
 										</includes>
 									</fileset>
@@ -135,14 +138,14 @@
 							<generatePackage>org.openwis.cacheindex.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/cacheindex</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>CacheIndex.wsdl</include>
 										</includes>
 									</fileset>
@@ -160,14 +163,14 @@
 							<generatePackage>org.openwis.request.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/request</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>RequestService.wsdl</include>
 										</includes>
 									</fileset>
@@ -185,14 +188,14 @@
 							<generatePackage>org.openwis.disseminatedDataStatistics.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/disseminatedDataStatistics</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>DisseminatedDataStatistics.wsdl</include>
 										</includes>
 									</fileset>
@@ -210,14 +213,14 @@
 							<generatePackage>org.openwis.exchangedDataStatistics.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/exchangedDataStatistics</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>ExchangedDataStatistics.wsdl</include>
 										</includes>
 									</fileset>
@@ -235,14 +238,14 @@
 							<generatePackage>org.openwis.replicatedDataStatistics.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/replicatedDataStatistics</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>ReplicatedDataStatistics.wsdl</include>
 										</includes>
 									</fileset>
@@ -260,14 +263,14 @@
 							<generatePackage>org.openwis.ingestedDataStatistics.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/ingestedDataStatistics</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>IngestedDataStatistics.wsdl</include>
 										</includes>
 									</fileset>
@@ -285,14 +288,14 @@
 							<generatePackage>org.openwis.controlservice.client</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/controlservice</generateDirectory>
 							<schemas>
-								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema>-->
+								<!--<schema><url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</url></schema> -->
 								<schema>
 									<fileset>
 										<!-- Defaults to schemaDirectory. -->
 										<directory>${basedir}/src/main/resources/schemas</directory>
 										<!-- Defaults to schemaIncludes. -->
 										<includes>
-											<!--<include>*.xsd</include>-->
+											<!--<include>*.xsd</include> -->
 											<include>ControlService.wsdl</include>
 										</includes>
 									</fileset>

@@ -29,6 +29,10 @@ openwis-war-overlay/images
 openwis-war-overlay/jcs_caching/
 openwis-war-overlay/*.db
 openwis-war-overlay/*.db.old
+openwis-web-ui/.settings
+openwis-web-ui/.project
+openwis-web-ui/.classpath
+openwis-web-ui/target
 openwis-wro4j/.settings
 openwis-wro4j/.project
 openwis-wro4j/.classpath

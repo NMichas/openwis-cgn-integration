@@ -36,6 +36,7 @@
 				<configuration>
 					<resourceBundles>
 						<resourceBundle>org.geonetwork-opensource:openwis-module-inject-poc:${project.version}</resourceBundle>
+						<resourceBundle>org.geonetwork-opensource:openwis-web-ui:${project.version}</resourceBundle>
 					</resourceBundles>
 					<outputDirectory>${project.build.directory}/remote-resources</outputDirectory>
 				</configuration>
@@ -71,7 +72,7 @@
 								<exclude>WEB-INF/lib/jetty-util-8.1.15.v20140411.jar</exclude>
 
 								<exclude>WEB-INF/lib/jetty-6.1.26.jar</exclude>
-								<exclude>WEB-INF/lib/jetty-util-6.1.26.jar</exclude>
+								<!-- <exclude>WEB-INF/lib/jetty-util-6.1.26.jar</exclude> -->
 
 								<exclude>WEB-INF/lib/json-20080701.jar</exclude>
 								
@@ -128,6 +129,10 @@
 		<dependency>
 			<groupId>org.geonetwork-opensource</groupId>
 			<artifactId>openwis-module-inject-poc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.geonetwork-opensource</groupId>
+			<artifactId>openwis-web-ui</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.geonetwork-opensource</groupId>

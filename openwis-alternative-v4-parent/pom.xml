@@ -17,13 +17,14 @@
 		<openwis.cgn.version>3.2.0-0</openwis.cgn.version>
 	</properties>
 	<modules>
-		<module>../openwis-wro4j</module>
-		<module>../openwis-war-overlay</module>
+		<module>../openwis-domain</module>
+		<module>../openwis-events</module>
 		<module>../openwis-module-inject-poc</module>
 		<module>../openwis-services</module>
 		<module>../openwis-services-client</module>
-		<module>../openwis-events</module>
-		<module>../openwis-domain</module>
+		<module>../openwis-war-overlay</module>
+		<module>../openwis-web-ui</module>
+		<module>../openwis-wro4j</module>
 	</modules>
 	<build>
 		<pluginManagement>
@@ -57,6 +58,11 @@
 			<dependency>
 				<groupId>org.geonetwork-opensource</groupId>
 				<artifactId>openwis-module-inject-poc</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.geonetwork-opensource</groupId>
+				<artifactId>openwis-web-ui</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -218,6 +224,11 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
