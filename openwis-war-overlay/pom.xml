@@ -128,10 +128,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.geonetwork-opensource</groupId>
-			<artifactId>openwis-module-inject-poc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.geonetwork-opensource</groupId>
 			<artifactId>openwis-web-ui</artifactId>
 		</dependency>
 		<dependency>

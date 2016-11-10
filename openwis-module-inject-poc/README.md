@@ -1,1 +1,0 @@
-This is a proof of concept module for injection into the CGN application.

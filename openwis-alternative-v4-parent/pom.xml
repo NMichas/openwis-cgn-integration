@@ -19,7 +19,6 @@
 	<modules>
 		<module>../openwis-domain</module>
 		<module>../openwis-events</module>
-		<module>../openwis-module-inject-poc</module>
 		<module>../openwis-services</module>
 		<module>../openwis-services-client</module>
 		<module>../openwis-war-overlay</module>
@@ -54,11 +53,6 @@
 				<artifactId>openwis-war-overlay</artifactId>
 				<version>${project.version}</version>
 				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>org.geonetwork-opensource</groupId>
-				<artifactId>openwis-module-inject-poc</artifactId>
-				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.geonetwork-opensource</groupId>
