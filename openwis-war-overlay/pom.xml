@@ -35,7 +35,6 @@
 				<artifactId>maven-remote-resources-plugin</artifactId>
 				<configuration>
 					<resourceBundles>
-						<resourceBundle>org.geonetwork-opensource:openwis-module-inject-poc:${project.version}</resourceBundle>
 						<resourceBundle>org.geonetwork-opensource:openwis-web-ui:${project.version}</resourceBundle>
 					</resourceBundles>
 					<outputDirectory>${project.build.directory}/remote-resources</outputDirectory>
@@ -81,6 +80,9 @@
 								<exclude>WEB-INF/lib/servlet-api-2.5-20081211.jar</exclude>
 								<exclude>WEB-INF/lib/servlet-api-2.5-6.1.14.jar</exclude>
 								<exclude>WEB-INF/lib/jsp-api-2.1-6.1.14.jar</exclude>
+								
+								<exclude>WEB-INF/data/wro4j-cache.h2.db</exclude>
+								<exclude>WEB-INF/data/wro4j-cache.lock.db</exclude>
 								
 								
 							</excludes>

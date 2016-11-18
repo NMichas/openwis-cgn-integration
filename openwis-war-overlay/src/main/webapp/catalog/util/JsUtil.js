@@ -70,7 +70,7 @@ JsUtil.appendHtmlContentIntoElement = function(jqTargetElement, url){
 	jQuery.ajaxSetup({async:false});
 	tempDiv.load(url, function(){
 		tempDiv.children().each(function () {
-			console.log('appending: ' + this.outerHTML);
+			//console.log('appending: ' + this.outerHTML);
 			jqTargetElement.append($(this).clone());
 		});
 		tempDiv.remove();
